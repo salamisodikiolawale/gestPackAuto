@@ -1,12 +1,13 @@
-/* You can add global styles to this file, and also import other style files */
 .total{
     display: flex;
     justify-content: space-between;
     padding-left: 10px;
     padding-right: 10px;
-    width: 50%;
+    width: 100%;
     font-weight: bold;
-    margin-right: 10px;
+    background-color: #3785A6;
+    padding: 10px;
+    border-radius: 8px;
 }
 
 .valeurRecettes{

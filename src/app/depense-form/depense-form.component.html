@@ -1,0 +1,29 @@
+<div class="home">
+    <div class="wrapper">
+        <h3>Enregistrement d'une dépense</h3>
+       
+      <form [formGroup]="depenseForm" (ngSubmit)="onSubmit()">
+        <div class="form-example">
+          <label for="immatricule">Immatricule: </label>
+          <input type="text" formControlName="immatricule" name="immatricule" required />
+        </div>
+          <div class="form-example">
+            <label for="date">Date: </label>
+            <input type="date" formControlName="date" name="date" required />
+          </div>
+          <div class="form-example">
+            <label for="montant">Montant: </label>
+            <input type="number" formControlName="montant" name="montant" required />
+          </div>
+          <div class="form-example">
+            <label for="motif">Motif: </label><br>
+            <textarea name="motif" formControlName="motif" id="motif" cols="50" rows="5"></textarea>
+        </div>
+          <div class="btn-login">
+            <button type="submit" [disabled]="!depenseForm.valid">Enregistrer</button>
+            <button (click)="annuler()" style="margin-left: 10px;">Annuler</button>
+          </div>
+        </form>
+        <span style="color: red; background-color: white; font-weight: bold; margin-top: 8px;">{{error}}</span>
+    </div>
+</div>

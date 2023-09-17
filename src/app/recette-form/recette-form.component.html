@@ -1,0 +1,36 @@
+<div class="home">
+    <div class="wrapper">
+        <h3>Enregistrement d'une recette</h3>
+       
+      <form [formGroup]="recetteForm" (ngSubmit)="onSubmit()">
+        <div class="form-example">
+          <label for="immatricule">Immatricule: </label>
+          <input type="text" formControlName="immatricule" name="immatricule" required />
+        </div>
+          <div class="form-example">
+            <label for="date">Date: </label>
+            <input type="date" formControlName="date" name="date" required />
+          </div>
+          <div class="form-example">
+            <label for="kilometrage">Kilometrage: </label>
+            <input type="number" formControlName="kilometrage" name="kilometrage" required />
+          </div>
+          <div class="form-example">
+            <label for="ObservationArrivee">Observation d'arrivée: </label><br>
+            <textarea name="ObservationArrivee" formControlName="ObservationArrivee" id="ObservationArrivee" cols="50" rows="5"></textarea>
+        </div>
+        <div class="form-example">
+            <label for="ObservationDepart">Observation de Départ: </label><br>
+            <textarea name="ObservationDepart" formControlName="ObservationDepart" id="ObservationDepart" cols="50" rows="5"></textarea>
+          </div>
+          <div class="form-example">
+            <label for="montant">Montant: </label>
+            <input type="number" formControlName="montant" name="montant" required />
+          </div>
+          <div class="btn-login">
+            <button type="submit" [disabled]="!recetteForm.valid">Enregistrer</button>
+          </div>
+        </form>
+        <span style="color: red; background-color: white; font-weight: bold; margin-top: 8px;">{{error}}</span>
+    </div>
+</div>

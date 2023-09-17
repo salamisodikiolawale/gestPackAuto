@@ -1,0 +1,43 @@
+<div class="home">
+    <div class="wrapper">
+        <h3>Enregistrement nouveau véhicule</h3>
+        <div class="img-voiture">
+            <img src="../../assets/images/taxi.png" width="400" style="border-radius: 5px;" alt="taxi">
+        </div>
+      <form [formGroup]="vehiculeForm" (ngSubmit)="onSubmit()">
+          <div class="form-example">
+            <label for="immatricule">Immatricule: </label>
+            <input type="text" formControlName="immatricule" name="immatricule" required />
+          </div>
+          <div class="form-example">
+            <label for="numSerie">Numéro série: </label>
+            <input type="text" formControlName="numSerie" name="numSerie" required />
+          </div>
+          <div class="form-example">
+            <label for="typeDeTransport">Type de transport: </label>
+            <input type="text" formControlName="typeDeTransport" name="typeDeTransport" required />
+          </div>
+          <div class="form-example">
+            <label for="nombreDeConduteur">Nombre de conduteur: </label>
+            <input type="text" formControlName="nombreDeConduteur" name="nombreDeConduteur" required />
+          </div>
+          <div class="form-example">
+            <label for="couleur">Couleur: </label>
+            <input type="text" formControlName="couleur" name="couleur" required />
+          </div>
+          <div class="form-example">
+            <label for="zone">Zone de service: </label>
+            <input type="text" formControlName="zone" name="zone" required />
+          </div>
+          <div class="form-example">
+            <label for="prix">Prix: </label>
+            <input type="number" formControlName="prix" name="prix" required />
+          </div>
+          <div class="btn-login">
+            <button type="submit" [disabled]="!vehiculeForm.valid">Enregistrer</button>
+            <button (click)="annuler()" style="margin-left: 10px;">Annuler</button>
+          </div>
+        </form>
+        <span style="color: red; background-color: white; font-weight: bold; margin-top: 8px;">{{error}}</span>
+    </div>
+</div>

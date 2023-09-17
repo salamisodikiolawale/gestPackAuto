@@ -1,0 +1,10 @@
+## LES COMMANDE GIT
+
+git clone le_lien_du_projet_à_cloner : permet de copier le projet distant sur ta machine
+git branch => Permet de voir les différentes branch du projet
+git branch nom_de_ta_branch => créer la branch nom_de_ta_branch
+git checkout nom_de_ta_branch => Permet de se deplacer sur la branch nom_de_ta_branch
+git status => Pour voir et lister les fichier que tu as modifier
+git add nom_du_fichier => Permet de préparer l'enregistrement du fichier
+git commit -m "fin de la tache page de connexion"
+git push => pour pousser ta branche

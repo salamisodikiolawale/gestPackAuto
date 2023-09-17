@@ -1,0 +1,54 @@
+<div class="container">
+    <h2>Liste des véhicules</h2>
+    
+    <div class="btn-add-bloc">
+        <div class="btn-add-bloc">
+            <button class="btn-add" (click)="ajouterNouvelleVoiture()">Ajouter un nouveau véhicule</button>
+            <!-- <div style="flex: 1; display: flex; justify-content: center; align-items: center;">
+                <app-total-visualisation></app-total-visualisation>
+            </div> -->
+        </div>
+    </div>
+    <table>
+        <!-- En-têtes de colonnes -->
+        <thead>
+            <tr>
+                <th class="titre">Immatricule</th>
+                <th>Num série</th>
+                <th>Type de transport</th>
+                <th>Nombre de conduteur</th>
+                <th>Couleur</th>
+                <th>Zone de service</th>
+                <th>Prix</th>
+                <th></th>
+            </tr>
+        </thead>
+        <!-- Corps de la table -->
+        <tbody>
+            <tr *ngFor="let vehicule of listeVehicules" class="contenu">
+                <td>{{vehicule.immatricule}}</td>
+                <td>{{vehicule.numSerie}}</td>
+                <td>{{vehicule.typeDeTransport}}</td>
+                <td>{{vehicule.nombreDeConduteur}}</td>
+                <td>{{vehicule.couleur}}</td>
+                <td>{{vehicule.zone}}</td>
+                <td>{{vehicule.prix}} Fcfa</td>
+                <td>
+                    <button class="btn-table btn-update" (click)="updateUneVoiture(vehicule)">Modifier</button>
+                    <button class="btn-table btn-delete" (click)="supprimerUneVoiture(vehicule.immatricule)">supprimer</button>
+                </td>
+            </tr>
+            <tr style="background-color: white;" class="contenu">
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td style="background-color: rgba(141, 137, 137, 0.295); font-weight: bold;">TOTAL</td>
+                <td style="padding: 20px;background-color: rgba(141, 137, 137, 0.295); font-weight: bold;">{{total}} Fcfa</td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+

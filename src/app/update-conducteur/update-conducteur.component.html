@@ -1,0 +1,37 @@
+<div class="home">
+    <div class="wrapper">
+        <h3>Modification du conducteur</h3>
+       
+      <form [formGroup]="conducteurForm" (ngSubmit)="onSubmit()">
+        <div class="form-example">
+          <label for="nom">Nom: </label>
+          <input type="text" formControlName="nom" name="nom" required />
+        </div>
+          <div class="form-example">
+            <label for="prenoms">Prénom(s): </label>
+            <input type="text" formControlName="prenoms" name="prenoms" required />
+          </div>
+          <div class="form-example">
+            <label for="age">Age: </label>
+            <input type="text" formControlName="age" name="age" required />
+          </div>
+          <div class="form-example">
+            <label for="experience">Expérience: </label>
+            <input type="number" formControlName="experience" name="experience" required />
+          </div>
+          <div class="form-example">
+            <label for="contact">Contact: </label>
+            <input type="text" formControlName="contact" name="contact" required />
+          </div>
+          <div class="form-example">
+            <label for="adresse">Adresse: </label>
+            <input type="text" formControlName="adresse" name="adresse" required />
+          </div>
+          <div class="btn-login">
+            <button type="submit" [disabled]="!conducteurForm.valid">Enregistrer</button>
+            <button style="margin-left: 10px;" >Annuler</button>
+          </div>
+        </form>
+        <span style="color: red; background-color: white; font-weight: bold; margin-top: 8px;">{{error}}</span>
+    </div>
+  </div>

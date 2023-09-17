@@ -1,0 +1,42 @@
+.container{
+    color: white;
+    background-color:  #3785A6;
+    border: 1px solid #3785A6;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+
+
+.btn-deconnexion{
+    border: none;
+    border-radius: 10px;
+    background-color: white;
+    font-size: 15px;
+    padding: 10px;
+}
+
+.btn-home{
+    border: none;
+    border-radius: 10px;
+    background-color: white;
+    font-size: 15px;
+    padding: 10px;
+    margin-right: 35px;
+    cursor: pointer;
+}
+
+.btn-home:hover{
+    background-color: #0d232c;
+    color: white;
+    cursor: pointer;
+}
+
+.btn-deconnexion:hover{
+    background-color: red;
+    color: white;
+    cursor: pointer;
+}

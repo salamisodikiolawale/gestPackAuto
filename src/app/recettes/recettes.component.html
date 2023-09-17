@@ -1,0 +1,49 @@
+<div class="container">
+    <h2>Liste des recettes</h2>
+    <div class="btn-add-bloc">
+        <button class="btn-add" (click)="ajouterUneRecette()">Ajouter une recette</button>
+        <div style="flex: 1; display: flex; justify-content: center; align-items: center;">
+            <app-total-visualisation></app-total-visualisation>
+        </div>
+    </div>
+    <table>
+        <!-- En-têtes de colonnes -->
+        <thead>
+            <tr>
+                <th class="titre">Date</th>
+                <th>Immatricule</th>
+                <th>Kilométrage</th>
+                <th>Observation de départ</th>
+                <th>Observation d'arrivée</th>
+                <th>Montant</th>
+                <th></th>
+            </tr>
+        </thead>
+        <!-- Corps de la table -->
+        <tbody>
+            <tr *ngFor="let recette of listeDesRecettes" class="contenu">
+                <td>{{recette.date}}</td>
+                <td>{{recette.immatricule}}</td>
+                <td>{{recette.kilometrage}}</td>
+                <td>{{recette.ObservationDepart}}</td>
+                <td>{{recette.ObservationArrivee}}</td>
+                <td>{{recette.montant}}</td>
+                <td>
+                    <button (click)="modifier(recette)" class="btn-table btn-update">Modifier</button>
+                    <!-- <button class="btn-table btn-delete">supprimer</button> -->
+                </td>
+                <td></td>
+            </tr>
+            <tr style="background-color: white;" class="contenu">
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td style="background-color: rgba(141, 137, 137, 0.295); font-weight: bold;">TOTAL RECETTES</td>
+                <td style="padding: 20px;background-color: rgba(141, 137, 137, 0.295); font-weight: bold;">{{totalRecettes}} Fcfa</td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+

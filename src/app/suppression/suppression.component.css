@@ -1,0 +1,41 @@
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 150px;
+}
+.bloc{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 150px;
+    font-size: 25px;
+    color: #3785A6;
+    border: 1px solid #3785A6;
+    width: 25%;
+    border-radius: 8px;
+}
+
+.btn-group{
+    padding-top: 50px;
+}
+
+button{
+    border: none;
+    padding: 15px;
+    border-radius: 8px;
+    margin: 10px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btn-oui{
+    color: white;
+    background-color: red;
+}
+
+.btn-non{
+    color: white;
+    background-color: green;
+}

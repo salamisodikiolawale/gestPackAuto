@@ -1,0 +1,43 @@
+<div class="container">
+    <h2>Liste des dépenses</h2>
+    <div class="btn-add-bloc">
+        <div class="btn-add-bloc">
+            <button class="btn-add" (click)="ajouterUneDepense()">Ajouter une dépense</button>
+            <div style="flex: 1; display: flex; justify-content: center; align-items: center;">
+                <app-total-visualisation></app-total-visualisation>
+            </div>
+        </div>
+    </div>
+    <table>
+        <!-- En-têtes de colonnes -->
+        <thead>
+            <tr>
+                <th class="titre">Date</th>
+                <th>Immatricule</th>
+                <th>Montant</th>
+                <th>Motif</th>
+                <th></th>
+            </tr>
+        </thead>
+        <!-- Corps de la table -->
+        <tbody>
+            <tr *ngFor="let depense of listeDesDepenses" class="contenu">
+                <td>{{depense.date}}</td>
+                <td>{{depense.immatricule}}</td>
+                <td>{{depense.montant}}</td>
+                <td>{{depense.motif}}</td>
+                <td>
+                    <button (click)="modifier(depense)" class="btn-table btn-update">Modifier</button>
+                    <!-- <button class="btn-table btn-delete">supprimer</button> -->
+                </td>
+            </tr>
+            <tr style="background-color: white;" class="contenu">
+                <td></td>
+                <td style="background-color: rgba(141, 137, 137, 0.295); font-weight: bold;">TOTAL DÉPENSES</td>
+                <td style="padding: 20px;background-color: rgba(141, 137, 137, 0.295); font-weight: bold;">{{totalDepenses}} Fcfa</td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+

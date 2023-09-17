@@ -1,0 +1,47 @@
+.home{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-group{
+    /* border: 1px solid red; */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    width: 100%;
+    padding: 50px;
+    
+}
+
+.btn{
+    background-color: #3785A6;
+    color: white;
+    font-size: 20px;
+    border-radius: 5px;
+    padding: 20px;
+    border: none;
+    margin: 10px;
+}
+
+
+
+.btn-vehicules{
+    background-color: #3785A6;
+}
+.btn-recettes{
+    background-color: #617F8B;
+}
+.btn-depenses{
+    background-color: #8B7061;
+}
+.btn-conducteurs{
+    background-color: #D7B4A0;
+}
+.btn-vehicules:hover, .btn-recettes:hover, .btn-depenses:hover, .btn-conducteurs:hover{
+    background-color: #3B2E2A;
+    cursor: pointer;
+}

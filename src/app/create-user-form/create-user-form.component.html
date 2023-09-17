@@ -1,0 +1,19 @@
+<div class="home">
+    <div class="wrapper">
+      <h3>Ajouter un nouveau gestionnaire</h3>
+      <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+          <div class="form-example">
+            <label for="name">Email: </label>
+            <input type="text" formControlName="email" name="email" id="email" required />
+          </div>
+          <div class="form-example">
+            <label for="email"> Mot de passe: </label>
+            <input type="password" formControlName="password" name="password" id="password" required />
+          </div>
+          <div class="btn-login">
+            <button type="submit" [disabled]="!loginForm.valid">Ajouter</button>
+          </div>
+        </form>
+        <span style="color: red; margin-top: 8px;">{{error}}</span>
+    </div>
+</div>

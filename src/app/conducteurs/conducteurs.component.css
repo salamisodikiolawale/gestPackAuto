@@ -1,0 +1,79 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-add-bloc{
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    padding-right: 20px;
+    padding-bottom: 20px;
+}
+
+.btn-add{
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    background-color: green;
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.total{
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    background-color: rgb(33, 131, 187);
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+table{
+    width: 100%;
+}
+
+th{
+    padding: 10px;
+    font-size: 20px;
+}
+
+tr{
+    background-color: rgba(141, 137, 137, 0.295);
+    text-align: center;
+}
+
+.contenu:hover{
+    background-color:  rgba(56, 54, 54, 0.295);
+}
+
+
+.btn-table{
+    padding: 5px;
+    margin-left: 3px;
+    margin-right: 3px;
+    cursor: pointer;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    padding: 8px;
+    margin: 5px;
+}
+
+.btn-update{
+    background-color: rgb(33, 131, 187);
+    color: white;
+}
+
+
+.btn-delete{
+    background-color: red;
+    color: white;
+}
